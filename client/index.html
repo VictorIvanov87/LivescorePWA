@@ -42,7 +42,7 @@
 
         if ('serviceWorker' in navigator) {
             navigator.serviceWorker
-                .register('./sw.js')
+                .register('./client/sw.js')
                 .then(reg => console.log('[ServiceWorker] Registered: ' + reg.scope));
         }
 
