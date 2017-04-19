@@ -1,0 +1,15 @@
+@import '../shared/shared';
+.article-image {
+    width: 100%;
+    max-width: 260px;
+    max-height: auto;
+}
+
+.article-description {
+    padding: 0 0 1rem 0;
+}
+
+.article-date {
+    padding-top: 1rem;
+    color: $darkColor;
+}

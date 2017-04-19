@@ -1,0 +1,36 @@
+@import url(http://fonts.googleapis.com/css?family=Kanit);
+$primaryColor: #424242;
+$accentColor: #FF9900;
+$lightColor: #E9E9E9;
+$darkColor: #9E9E9E;
+$info: #3299BB;
+body {
+    height: 100%;
+    background-color: $darkColor;
+    font: 62.5% 'Kanit', sans-serif;
+    .no-padding {
+        padding: 0;
+    }
+    .url {
+        color: $accentColor;
+    }
+    .livescore-holder {
+        background-color: $lightColor;
+        border-radius: 2px;
+        width: 94%;
+        margin: 1rem 3%;
+        box-shadow: 1px 1px 2px $primaryColor;
+        .livescore-title {
+            background-color: $primaryColor;
+            color: $lightColor;
+            border-radius: 2px 2px 0 0;
+            font-size: 1.2rem;
+            padding: 1.2rem;
+            margin: 0;
+        }
+        .livescore-body {
+            font-size: 1rem;
+            color: $primaryColor;
+        }
+    }
+}

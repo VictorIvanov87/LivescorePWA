@@ -1,0 +1,34 @@
+<div class="back-button-holder">
+    <a ui-sref="home" class="back-button">back to fixtures</a>
+</div>
+<div class="match-details-holder container-fluid row">
+    <team class="home-team col-xs-6 col-sm-4 container-fluid row first-xs first-sm center-xs middle-xs" team-id="$ctrl.fixtureDetails.homeTeamId"></team>
+    <div class="fixture-info col-xs-12 col-sm-4 last-xs first-sm center-xs middle-xs between-xs row">
+        <div class="result col-xs-12">{{$ctrl.fixtureDetails.homeTeamGoals}} : {{$ctrl.fixtureDetails.awayTeamGoals}}</div>
+        <div class="time col-xs-12 no-padding">{{$ctrl.fixtureDetails.date | date: "d MMM, H:mm"}}</div>
+    </div>
+    <team class="away-team col-xs-6 col-sm-4 container-fluid row first-xs last-sm center-xs middle-xs" team-id="$ctrl.fixtureDetails.awayTeamId"></team>
+</div>
+<div class="livescore-holder row">
+    <h2 class="livescore-title col-xs-12">Odds:</h2>
+    <div class="livescore-body row">
+        <div class="home-team-odd col-xs-12 col-sm-4 center-sm">{{$ctrl.fixtureDetails.homeTeamName}}: {{$ctrl.fixtureDetails.homeTeamOdd}}</div>
+        <div class="draw-odd col-xs-12 col-sm-4 center-sm">Draw: {{$ctrl.fixtureDetails.drawOdd}}</div>
+        <div class="away-team-odd col-xs-12 col-sm-4 center-sm">{{$ctrl.fixtureDetails.awayTeamName}}: {{$ctrl.fixtureDetails.awayTeamOdd}}</div>
+    </div>
+</div>
+<div class="livescore-holder row" ng-if="$ctrl.fixtureDetails.lastFixtures.length > 0">
+    <h2 class="livescore-title col-xs-12">Last {{$ctrl.fixtureDetails.lastFixtures.length}} fixtures:</h2>
+    <div class="livescore-body row">
+        <div class="home-team-wins col-xs-12 col-sm-4 center-sm">{{$ctrl.fixtureDetails.homeTeamName}} wins: {{$ctrl.fixtureDetails.homeTeamWins}}</div>
+        <div class="draws col-xs-12 col-sm-4 center-sm">Draws: {{$ctrl.fixtureDetails.draws}}</div>
+        <div class="away-team-wins col-xs-12 col-sm-4 center-sm">{{$ctrl.fixtureDetails.awayTeamName}} wins: {{$ctrl.fixtureDetails.awayTeamWins}}</div>
+    </div>
+</div>
+<div class="livescore-holder" ng-if="$ctrl.fixtureDetails.lastFixtures.length > 0">
+    <h2 class="livescore-title col-xs-12">Details:</h2>
+    <fixture class="fixture-holder container-fluid row" ng-repeat="fixture in $ctrl.fixtureDetails.lastFixtures" fixture="fixture"></fixture>
+</div>
+<div class="back-button-holder">
+    <a ui-sref="home" class="back-button">back to fixtures</a>
+</div>

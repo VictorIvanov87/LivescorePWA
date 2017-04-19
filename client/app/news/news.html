@@ -1,0 +1,13 @@
+<article class="livescore-holder" ng-repeat="article in $ctrl.allNews | orderBy:'-publishedAt'">
+    <h2 class="livescore-title">{{article.title}}</h2>
+    <div class="livescore-body container-fluid row no-padding">
+        <div class="col-xs-12 center-xs col-sm-4">
+            <img class="article-image" ng-src="{{article.urlToImage}}" alt="article-image">
+        </div>
+        <div class="col-xs-12 col-sm-8 row">
+            <span class="article-description col-xs-12">{{article.description}}</span>
+            <date class="article-date row col-xs-6 start-xs bottom-xs no-padding">{{article.publishedAt | date}}</date>
+            <a ng-href="{{article.url}}" class="row col-xs-6 end-xs bottom-xs no-padding url">Read more</a>
+        </div>
+    </div>
+</article>

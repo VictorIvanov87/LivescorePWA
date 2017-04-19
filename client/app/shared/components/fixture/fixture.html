@@ -1,0 +1,10 @@
+<div class="home-team col-xs-6 start-xs col-sm-4 end-sm">{{$ctrl.fixture.homeTeamName}}</div>
+<div class="result col-xs-6 end-xs col-sm-2 center-sm">{{$ctrl.fixture.homeTeamGoals}} : {{$ctrl.fixture.awayTeamGoals}}</div>
+<div class="away-team col-xs-6 start-xs col-sm-4 start-sm">{{$ctrl.fixture.awayTeamName}}</div>
+<div class="time col-xs-6 end-xs col-sm-2 end-sm">
+    <span ng-show="$ctrl.fixture.status == 'TIMED' || $ctrl.fixture.status == 'SCHEDULED'">{{$ctrl.fixture.date | formatdate}}</span>
+    <span ng-show="$ctrl.fixture.status == 'IN_PLAY'">{{$ctrl.time($ctrl.fixture.date)}}<span class="live"></span></span>
+    <span ng-show="$ctrl.fixture.status == 'FINISHED' || $ctrl.fixture.status == null">Finished</span>
+    <span ng-show="$ctrl.fixture.status == 'CANCELED'">Canceled</span>
+    <span ng-show="$ctrl.fixture.status == 'POSTPONED'">Postponed</span>
+</div>
