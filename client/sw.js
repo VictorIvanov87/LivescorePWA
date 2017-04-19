@@ -2,18 +2,7 @@ let appShellCache = 'livescoreApp-v1';
 let freshDataCache = 'apiData';
 let filesToCache = [
     './',
-    './index.html',
-    './css/flexboxgrid.css',
-    './manifest.json',
-    './icons',
-    './icons/LiveScore48.png',
-    './icons/LiveScore72.png',
-    './icons/LiveScore96.png',
-    './icons/LiveScore144.png',
-    './icons/LiveScore168.png',
-    './icons/LiveScore192.png',
-    'vendor.bundle.js?1c7a233f9a1d9d953cb3',
-    'app.bundle.js?1c7a233f9a1d9d953cb3'
+    './index.html'
 ];
 
 self.addEventListener('install', function(e) {
