@@ -5,13 +5,16 @@ let filesToCache = [
     './index.html',
     './css/flexboxgrid.css',
     './manifest.json',
-    './icons',
     './icons/LiveScore48.png',
     './icons/LiveScore72.png',
     './icons/LiveScore96.png',
     './icons/LiveScore144.png',
     './icons/LiveScore168.png',
-    './icons/LiveScore192.png'
+    './icons/LiveScore192.png',
+    'app.bundle.js',
+    'vendor.bundle.js',
+    'app.bundle.js?c077c62319c6c882605d',
+    'vendor.bundle.js?c077c62319c6c882605d'
 ];
 
 self.addEventListener('install', function(e) {
