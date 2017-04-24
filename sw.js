@@ -44,9 +44,9 @@ self.addEventListener('activate', function(e) {
 
 self.addEventListener('fetch', function(e) {
     // console.log('[Service Worker] Fetch', e.request.url);
-    let dataUrl = 'http://api.football-data.org';
+    let dataUrl = 'https://api.football-data.org';
     let newsUrl = 'https://newsapi.org';
-    let logosUrl = 'http://upload.wikimedia.org/';
+    let logosUrl = 'https://upload.wikimedia.org/';
 
     if (e.request.url.indexOf(dataUrl) > -1) {
         e.respondWith(
