@@ -37,19 +37,19 @@
         // ga('create', 'UA-71073175-2', 'auto');
         // ga('send', 'pageview');
 
-        // if ('serviceWorker' in navigator) {
-        //     navigator.serviceWorker
-        //         .register('/sw.js')
-        //         .then(reg => console.log('[ServiceWorker] registered: ' + reg.scope))
-        //         .then(() => {
-        //             if (Notification.requestPermission) {
-        //                 Notification.requestPermission(result => console.log("[Notifications]", result));
-        //             } else {
-        //                 console.log("[Notifications] supported by this browser.");
-        //             }
-        //         })
-        // }
+        if ('serviceWorker' in navigator) {
+            navigator.serviceWorker
+                .register('/sw.js')
+                .then(reg => console.log('[ServiceWorker] registered: ' + reg.scope))
+                .then(() => {
+                    if (Notification.requestPermission) {
+                        Notification.requestPermission(result => console.log("[Notifications]", result));
+                    } else {
+                        console.log("[Notifications] supported by this browser.");
+                    }
+                })
+        }
     </script>
-<script src="vendor.bundle.js?ddde6a11cc48564a36a2"></script><script src="app.bundle.js?ddde6a11cc48564a36a2"></script></body>
+<script src="vendor.bundle.js?3036b1c601894ae73935"></script><script src="app.bundle.js?3036b1c601894ae73935"></script></body>
 
 </html>
